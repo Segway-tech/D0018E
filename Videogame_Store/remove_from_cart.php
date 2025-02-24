@@ -1,5 +1,5 @@
 <?php
-//enable error reporting for debugging (remove in production)
+//enable error reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 

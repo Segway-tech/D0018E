@@ -80,7 +80,7 @@ try {
             <?php if (isset($_SESSION['username'])): ?>
                 <span>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
                 <?php
-                    // Query total items in the shopping cart
+                    //query items in shopping cart
                     $stmt = $pdo->prepare("SELECT SUM(quantity) as total FROM shopping_cart WHERE user_id = ?");
                     $stmt->execute([$_SESSION['user_id']]);
                     $cartCount = $stmt->fetchColumn();

@@ -3,7 +3,7 @@
 <?php
 //start session, include database connection
 session_start();
-require 'db_connect.php'; // Create a separate file for connecting to MySQL
+require 'db_connect.php'; //create a separate file for connecting to MySQL
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //get and validate inputs
