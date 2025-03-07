@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-//redirect back to the store page
+//redirect back to the store page (or a cart page)
 header("Location: index.php");
 exit;
 ?>

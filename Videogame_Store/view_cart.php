@@ -88,7 +88,15 @@ try {
             </tr>
             <?php endforeach; ?>
         </table>
+
         <h3 style="text-align:center;">Grand Total: <?= number_format($grandTotal, 2) ?></h3>
+
+	<!-- checkout button -->
+	
+	<form action="checkout.php" method="post" style="text-align:center;">
+            <input type="submit" value="Checkout">
+        </form>
+
     <?php else: ?>
         <p>Your cart is empty. Please add an item to proceed to checkout.</p>
     <?php endif; ?>
