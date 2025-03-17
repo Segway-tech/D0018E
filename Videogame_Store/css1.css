@@ -1,48 +1,173 @@
+
+
+.star-rating {
+  display: inline-block;
+  direction: rtl;       
+  unicode-bidi: bidi-override;
+  white-space: nowrap; 
+}
+
+.star-rating input[type="radio"] {
+  display: none;        
+}
+
+.star-rating label {
+  display: inline-block;
+  font-size: 2rem;       
+  color: #666;           
+  cursor: pointer;
+  margin: 0 3px;    
+  font-family: 'Press Start 2P', monospace;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #0F0; 
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+  color: #00FF00; 
+}
+
+
+
 body {
-    background-color: black;
-    color: white;
+    background-color: #000; 
+    color: #00FF00; 
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', monospace;
 }
-header{
+
+header {
     text-align: center;
     padding: 20px;
+    background-color: #111;
+    border-bottom: 4px double #00FF00; 
 }
 
-.blue-line{
+
+.blue-line {
     width: 100%;
     height: 5px;
-    background-color: blue;
+    background-color: #00FF00;
     margin: 0;
 }
-.vertical-line{
+
+
+.vertical-line {
     position: absolute;
     top: 0;
     left: 10%;
     width: 5px;
     height: 100%;
-    background-color: blue;
+    background-color: #00FF00;
 }
-.press-start-2p-regular {
-    font-family: "Press Start 2P", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-.center-rectangle{
+
+
+.center-rectangle {
     position: absolute;
     top: 111px; 
     left: 187px; 
     width: 15px; 
     height: 15px; 
-    background-color: black;
+    background-color: #000;
+    border: 2px solid #00FF00;
 }
-.center-rectangle2{
+
+.center-rectangle2 {
     position: absolute;
     top: 116px; 
     left: 192px; 
     width: 5px; 
     height: 5px; 
-    background-color: blue;
+    background-color: #00FF00;
+}
+
+.nav {
+    margin: 10px 40px;
+    text-align: right;
+}
+
+
+.nav a {
+    color: #00FF00;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 40px auto;
+    background-color: #111; 
+    border: 4px double #00FF00;
+}
+
+
+table, th, td {
+    border: 2px solid #00FF00;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: #00FF00; 
+}
+
+
+th {
+    background-color: #222;
+}
+
+
+tr:hover {
+    background-color: #333;
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background-color: #111;
+    border-top: 4px double #00FF00;
+}
+
+
+h1, h2 {
+    color: #00FF00;
+    text-shadow: 1px 1px 0px #008000; 
+}
+
+
+.search-form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-form input, .search-form select, .search-form button {
+    margin: 5px;
+    background-color: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 5px;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.search-form button:hover {
+    background-color: #00FF00;
+    color: #000;
+    cursor: pointer;
+}
+
+
+input[type="submit"], button {
+    cursor: pointer;
+}
+
+
+a:hover {
+    text-shadow: 0 0 5px #00FF00;
 }

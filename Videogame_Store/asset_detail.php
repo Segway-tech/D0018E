@@ -133,7 +133,7 @@ $avgStarDisplay = ($roundedAvg > 0) ? getStarString($roundedAvg) : '';
             <?php if (isset($_SESSION['username'])): ?>
                 <span>Welcome, <?= htmlspecialchars($_SESSION['username']) ?>!</span>
                 <?php
-            
+                // If you want the cart count here, same as index
                 $stmt = $pdo->prepare("SELECT SUM(quantity) as total FROM shopping_cart WHERE user_id = ?");
                 $stmt->execute([$_SESSION['user_id']]);
                 $cartCount = $stmt->fetchColumn();
@@ -152,7 +152,10 @@ $avgStarDisplay = ($roundedAvg > 0) ? getStarString($roundedAvg) : '';
 
     <div class="blue-line"></div>
     <div class="vertical-line"></div>
-
+    <!-- omit center-rectangle to avoid stray dots
+    <div class="center-rectangle"></div>
+    <div class="center-rectangle2"></div>
+    -->
 
     <div class="content-area">
         <h1>
@@ -163,7 +166,7 @@ $avgStarDisplay = ($roundedAvg > 0) ? getStarString($roundedAvg) : '';
         <p>Stock: <?= htmlspecialchars($asset['stock_amount']) ?></p>
 
         <?php if ($totalReviews > 0): ?>
-            <!--STARS FOR AVERAGE RATING -->
+            <!-- USING STARS FOR AVERAGE RATING -->
             <h3>Average Rating: <em><?= $avgStarDisplay ?></em> (<?= $totalReviews ?> reviews)</h3>
         <?php else: ?>
             <h3>No reviews yet.</h3>
@@ -172,7 +175,7 @@ $avgStarDisplay = ($roundedAvg > 0) ? getStarString($roundedAvg) : '';
         <!-- show reviews -->
         <?php foreach ($reviews as $rev): ?>
             <?php
-            //STARS FOR INDIVIDUAL REVIEW
+            // USING STARS FOR INDIVIDUAL REVIEW
             $revStarString = getStarString($rev['rating']);
             ?>
             <div class="review-box">
